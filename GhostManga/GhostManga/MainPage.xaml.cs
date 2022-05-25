@@ -16,16 +16,19 @@ namespace GhostManga
         }
         async void searchClick(object sender, EventArgs args)
         {
+            //display message when search word is empty
             if (searchWord.Text == null)
             {
                 await DisplayAlert("buttonClick","You didnt search anything", "ok");
             }
+            //if not type is selected title will be the default  
             else if (searchType.SelectedItem == null)
             {
                 await DisplayAlert("buttonClick", "Searchword= " + searchWord.Text + "\nSearchType= title" , "ok");
             }
+            //everything that was typed and selected
             else
-            await DisplayAlert("buttonClick","Searchword= "+searchWord.Text+"\nSearchType= "+searchType.SelectedItem,"ok");
+                await DisplayAlert("buttonClick","Searchword= "+searchWord.Text+"\nSearchType= "+searchType.SelectedItem,"ok");
         }
     }
 }
