@@ -15,14 +15,27 @@
                 Text="GhostManga"
                 TextColor="White" />
         </Frame>
-        
+
         <Entry
-                x:Name="searchWord"
-                IsSpellCheckEnabled="false"
-                IsTextPredictionEnabled="false"
-                Placeholder="Search" />
-        
-        <Button Text="Search" />
+            x:Name="searchWord"
+            IsSpellCheckEnabled="false"
+            IsTextPredictionEnabled="false"
+            Placeholder="Search" />
+
+        <Picker
+            x:Name="searchType"
+            Title="Select a Search Type"
+            SelectedItem="Title">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Title</x:String>
+                    <x:String>Author</x:String>
+                    <x:String>Genre</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button Clicked="searchClick" Text="Search" />
     </StackLayout>
 
 </ContentPage>

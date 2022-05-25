@@ -14,5 +14,18 @@ namespace GhostManga
         {
             InitializeComponent();
         }
+        async void searchClick(object sender, EventArgs args)
+        {
+            if (searchWord.Text == null)
+            {
+                await DisplayAlert("buttonClick","You didnt search anything", "ok");
+            }
+            else if (searchType.SelectedItem == null)
+            {
+                await DisplayAlert("buttonClick", "Searchword= " + searchWord.Text + "\nSearchType= title" , "ok");
+            }
+            else
+            await DisplayAlert("buttonClick","Searchword= "+searchWord.Text+"\nSearchType= "+searchType.SelectedItem,"ok");
+        }
     }
 }
