@@ -28,9 +28,9 @@
             SelectedItem="Title">
             <Picker.ItemsSource>
                 <x:Array Type="{x:Type x:String}">
-                    <x:String>Title</x:String>
-                    <x:String>Author</x:String>
-                    <x:String>Genre</x:String>
+                    <x:String>title</x:String>
+                    <x:String>author</x:String>
+                    <x:String>genre</x:String>
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
